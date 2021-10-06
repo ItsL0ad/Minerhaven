@@ -1,0 +1,9 @@
+game:GetService("RunService").RenderStepped:Connect(function()
+	if getgenv().halloween then
+		if game:GetService("Workspace"):FindFirstChild("Pumpkin") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Pumpkin.CFrame
+		elseif game:GetService("Workspace"):FindFirstChild("MegaPumpkin") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").MegaPumpkin.CFrame
+		end
+	end
+end)
